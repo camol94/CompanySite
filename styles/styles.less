@@ -3,10 +3,14 @@ body {
 	font-size: @basic-font-size;
 	color: @basic-text-color;
 	background: @bg-color;
+	min-width: 360px;
 }
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+a {
+	.basic-transition(0.4s);
 }
 a.button {
 			color: @header-color;
@@ -15,6 +19,7 @@ a.button {
 			padding: 10px 25px;
 			text-decoration: none;
 			font-size: 18px;
+			.basic-transition(0.4s);
 			&:hover {
 				background: none;
 				color: @accent-color;
@@ -80,10 +85,8 @@ header {
 			display: inline;
 			margin-right: 10px;
 			i {
-				.size(20px;20px);
-				
-				.center;
-				
+				.size(20px;20px);				
+				.center;				
 			}
 			&:hover {
 				color: @accent-color;
@@ -181,18 +184,22 @@ nav {
 .offer {
 	border-bottom: 1px solid @border-color;
 	padding: 50px 0;
+
 	.center;
 	.content {
 		border: 1px solid @border-color;
 		width: 70%;
 		margin: 10px auto;
 		background: #c1c1c1;
+		.basic-transition(0.4s);
+
 		@media @desktop {
 			width: 100%;
 		}
 		img {
 			.size(100%;100%);
 			border-bottom: 4px solid @border-color;
+			.basic-transition(0.4s);
 		}
 		span {
 			position: relative;
@@ -205,6 +212,7 @@ nav {
 			line-height: 45px;
 			.border-radius(50%);
 			border: 4px solid @border-color;
+			.basic-transition(0.4s);
 		}
 		h3 {
 			color: @accent-color;
@@ -231,10 +239,54 @@ nav {
 .order {
 	padding: 50px 0 25px 0;
 	border-bottom: 1px solid @border-color;
-	.center;
 	.content {
+		clear: both;
 		margin-bottom: 25px;
 		border: 1px solid @border-color;
+		display: inline-block;		
+		width: 100%;
+		background: #c1c1c1;
+		.basic-transition(0.4s);
+		a {
+			color: @basic-text-color;
+		}
+		&:hover {
+			color: @accent-color;
+			a {
+				color: @accent-color;
+			}
+		}
+		ul {
+			.no-style-list;
+			background: #c1c1c1;
+			li {
+				display: inline;
+				float: left;
+				
+				
+			}
+			h3 {
+				line-height: 70px;
+				margin-left: 15px;
+				font-size: 23px;
+			}
+			i {
+				.size(70px;70px);
+				line-height: 70px;
+				font-size: 33px;
+				.center;
+			}
+			li:first-child {
+				border-right: 1px solid @border-color;
+				i {
+
+				}
+			}
+			li:last-child {
+				float: right;
+				border-left: 1px solid @border-color;
+			}
+		}
 	}
 }
 .articles {
@@ -312,4 +364,12 @@ footer {
 }
 .footer-copy {
 	padding: 15px 0;
+	font-size: 19px;
+	a {
+		color: @accent-color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
