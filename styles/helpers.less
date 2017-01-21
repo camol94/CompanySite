@@ -1,0 +1,35 @@
+//HELPERY//
+@desktop: ~"all and (min-width: 890px)";
+
+
+//pozycjonowanie
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+.left {
+	text-align: left;
+}
+// rozmiar
+.size(@width;@height) {
+	width: @width;
+	height: @height;
+}
+// transition
+.basic-transition(@time) {
+	transition: all @time ease-in-out;
+}
+// zaokraglone narozniki
+.border-radius(@radius) {
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-o-border-radius: @radius;
+}
+
+//lista  bez styli
+.no-style-list {
+	list-style-type: none;
+}
